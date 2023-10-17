@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sistema de Envíos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="header-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Delivery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <form id="formulario-pedido">
+                <label for="metodoPago">Método de pago:</label>
+                <select id="metodoPago">
+                    <option value="tarjeta">Tarjeta</option>
+                    <option value="efectivo">Efectivo</option>
+                </select>
+
+                <label for="distanciaKM">Distancia en KM:</label>
+                <input type="number" id="distanciaKM" required>
+
+                <label for="valorCompra">Valor de Compra:</label>
+                <input type="number" id="valorCompra" required>
+
+                <input type="submit" value="Agregar Pedido">
+            </form>
+        </section>
+
+        <section id="pedidos-section">
+            <div id="lista-pedidos"></div>
+        </section>
+        <section id="saldo-section">
+            <h3>Resumen de Saldo</h3>
+            <div>Total de Envíos: $<span id="total-envios">0</span></div>
+            <div>Total de Compras: $<span id="total-compras">0</span></div>
+            <div>Total General: $<span id="total-general">0</span></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Sistema de Envíos</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
