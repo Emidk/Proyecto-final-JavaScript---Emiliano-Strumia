@@ -1,4 +1,4 @@
-// Simulamos una API con localStorage
+
 const API = {
     guardarPedido: async function (pedido) {
         return new Promise((resolve) => {
